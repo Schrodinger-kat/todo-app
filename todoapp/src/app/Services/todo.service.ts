@@ -27,4 +27,13 @@ getTodos():Observable<Todo[]>{
     const url = `${this.todosUrl}/${to.id}`
     return this.http.put(url, to, httpOps);
   }
+
+  addTodo(to:Todo):Observable<Todo>{
+    return this.http.post<Todo>(this.todosUrl,to,httpOps)
+  }
+
+  deleteTodo(to:Todo):Observable<Todo>{
+    const url = `${this.todosUrl}/${to.id}`
+    return this.http.delete<Todo>(url,httpOps)
+  }
 }

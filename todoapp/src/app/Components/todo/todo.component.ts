@@ -19,5 +19,16 @@ export class TodoComponent implements OnInit {
       this.todo = todo;
     });
   }
+deleteTodo(to:Todo){
+  this.todo = this.todo.filter(t=>t.id!==to.id);
+  this.ts.deleteTodo(to).subscribe();
+    console.log('delete todo');
+    
+}
+addTodo(to:Todo){
+this.ts.addTodo(to).subscribe(to => {
+   this.todo.push(to)})
+
+} 
 
 }

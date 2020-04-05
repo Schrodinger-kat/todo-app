@@ -1,0 +1,11 @@
+.header{
+    background: darkcyan;
+    color: antiquewhite;
+    text-align: center;
+    padding: 10px;
+}
+
+.header a{
+    color: aliceblue;
+    text-decoration: none;
+}
